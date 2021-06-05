@@ -25,15 +25,7 @@ class classesModel {
 		$result = mysqli_query($conn, $sql);
 
 		if($result){
-			$json = array();
-			while($row = mysqli_fetch_assoc($result)){
-				$id = $row['idClass'];
-				$json[$id]['Ano'] = $row['year'];
-				$json[$id]['Nivel'] = $row['level'];
-				$json[$id]['Periodo'] = $row['series'];
-				$json[$id]['Turno'] = $row['shift'];
-			}
-			return json_encode($json);
+			return $result;
 		} else{
 			echo "Erro na listagem de Turmas.";
 		}

@@ -10,7 +10,7 @@ class classesController {
 	// Método padrão é chamado de index
 	public function index() {	
 		$classesModel = new classesModel();
-		$jsonClases = $classesModel->getClasses();
+		$resultClasses = $classesModel->getClasses();
 		
 		require_once 'src/view/classes_view.php'; // Carrega o arquivo da Interface
   }

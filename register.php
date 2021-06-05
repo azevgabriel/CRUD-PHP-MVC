@@ -3,7 +3,7 @@
   include(HEADER_TEMPLATE);
 ?>
     <article>
-      Seja bem vindo
+      Register
     </article>
 <?php
   include(FOOTER_TEMPLATE);
