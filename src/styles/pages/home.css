@@ -79,8 +79,8 @@ article form {
   flex-direction: row;
 }
 
-article form input {
-  width: 20rem;
+.search input {
+  width: 30rem;
   height: 2.5rem;
   border: 0;
   padding-left: 1rem;
@@ -88,32 +88,20 @@ article form input {
   border-bottom-left-radius: 2rem;
 }
 
-
-article form select {
-  margin-right: 2rem;
-  width: 10rem;
-  height: 2.5rem;
-  border: 0;
-  background: rgb(28, 46, 150);
-  color: #FFF;
-  font-size: 1.1rem;
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-}
-
-article form button {
+.search button {
   margin-right: 2rem;
   height: 2.5rem;
   border: 0;
   background: rgb(28, 46, 150);
   color: #FFF;
   padding: 0 2rem;
-  border-radius: 2rem;
   transition: background 0.5s;
   transition: color 0.3s;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 
-article form button:hover {
+.search button:hover {
   background: white;
   color:black;
 }
