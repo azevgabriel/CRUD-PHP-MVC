@@ -5,7 +5,6 @@ Aqui no Model é onde fica a parte lógica da aplicação.
 Aqui é o local onde seriam feitas as comunicações 
 com Banco de Dados, as validações, etc.
 */
-
 require_once 'src/lib/connection.php';
 
 class classesModel {
@@ -16,16 +15,28 @@ class classesModel {
 	public $shift;
 	
 	public function getClasses() {
-		return "Lista as turmas do banco de dados";
-	}
-	public function addClass() {
-		return "Adiciona a turma do banco de dados";
-	}
-	public function deleteClass() {
-		return "Deleta a turma do banco de dados";
-	}
-	public function updateClass() {
-		return "Atualiza a turma do banco de dados";
+		// Conecta com o banco de dados.
+		$Connection = new Connection();
+		$conn = $Connection->getConnect();
+		// Cria pesquisa no banco de dados.
+		$sql = "SELECT * FROM classes";
+
+		//
+		$result = mysqli_query($conn, $sql);
+
+		if($result){
+			$json = array();
+			while($row = mysqli_fetch_assoc($result)){
+				$id = $row['idClass'];
+				$json[$id]['Ano'] = $row['year'];
+				$json[$id]['Nivel'] = $row['level'];
+				$json[$id]['Periodo'] = $row['series'];
+				$json[$id]['Turno'] = $row['shift'];
+			}
+			return json_encode($json);
+		} else{
+			echo "Erro na listagem de Turmas.";
+		}
 	}
 }
 ?>

@@ -3,9 +3,11 @@
   width: 100vw;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 
   align-items: center;
 }
+
 nav {
   width: 30%;
   height: 90%;
@@ -25,7 +27,17 @@ nav img {
   width: 20rem;
 }
 
-nav h1 {
+.nav-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-header img {
+  width: 3rem;
+}
+
+.nav-header h1 {
   color: #000;
 }
 
@@ -45,13 +57,13 @@ nav p a:hover {
   color: rgb(28, 46, 150);
 }
 
-.nav {
+.nav-body {
   width: 60%;
   display: flex;
   flex-direction: column;
 }
 
-.nav button {
+.nav-body button {
   border: 0;
   border-radius: 2rem;
   padding: 1rem;
@@ -59,7 +71,16 @@ nav p a:hover {
   transition: color 0.6s;
 }
 
-.nav button:hover {
+.nav-body button:hover {
   background: rgb(28, 46, 150);
   color: #FFF;
+}
+
+article {
+  display: flex;
+  width: 60%;
+  height: 90%;
+ 
+  background: #c9d1b2;
+
 }

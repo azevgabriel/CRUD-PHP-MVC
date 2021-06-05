@@ -7,6 +7,8 @@
             //Verifica se a conexão falhou.
             if (!$conn) {
                 return ("A conexão com o Banco de Dados falhou!");
+            } else  {
+                return $conn;
             }
         }       
     }

@@ -12,8 +12,11 @@
   <div class="container">
     <nav>
       <img src="public/img/logo.svg"/>
-      <h1>Controle de Estudantes</h1>
-      <div class="nav">
+      <div class="nav-header">
+        <img src="public/img/cap.svg"/>
+        <h1>Controle de Estudantes</h1>
+      </div>
+      <div class="nav-body">
         <button>Cadastar</button>
         <br />
         <button>Listar</button>
@@ -24,8 +27,8 @@
         ,como objetivo de desenvolver um sistema de controle de alunos de uma escola.
       </p>
     </nav>
-    
     <article>
+      Artigo
     <?php
       require_once 'src/controller/classesController.php'; // Carrega o arquivo classesController.php
       $classesController = new classesController(); // classesController
