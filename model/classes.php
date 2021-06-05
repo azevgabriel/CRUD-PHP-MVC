@@ -10,16 +10,16 @@
 class classesModel {
 	
 	public function getClasses() {
-		echo "Lista as turmas do banco de dados";
+		return "Lista as turmas do banco de dados";
 	}
 	public function addClass() {
-		echo "Adiciona a turma do banco de dados";
+		return "Adiciona a turma do banco de dados";
 	}
 	public function deleteClass() {
-		echo "Deleta a turma do banco de dados";
+		return "Deleta a turma do banco de dados";
 	}
 	public function updateClass() {
-		echo "Atualiza a turma do banco de dados";
+		return "Atualiza a turma do banco de dados";
 	}
 }
 ?>

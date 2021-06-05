@@ -10,6 +10,13 @@ Esta é a camada de intereção com o usuário.
   <title>Tassi Transporte</title>
 </head>
 <body>
-  <?php echo "Class_View" ?>
+  <?php echo $listar ?>
+  </br>
+  <?php echo $atualizar ?>
+  </br>
+  <?php echo $adicionar ?>
+  </br>
+  <?php echo $remover ?>
+  </br>
 </body>
 </html>
