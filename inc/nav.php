@@ -19,9 +19,23 @@
         <h1>Controle de Estudantes</h1>
       </div>
       <div class="nav-body">
-        <a href="register.php">Cadastar</a>
-        <br />
-        <a href="listClasses.php">Listar</a>
+      <div class="dropdown">
+        <button class="dropbtn">Cadastar</button>
+        <div class="dropdown-content">
+          <a href="register.php">Estudante</a>
+          <a href="register.php">Turma</a>
+          <a href="register.php">Escola</a>
+        </div>
+      </div>
+      <br/>
+      <div class="dropdown">
+        <button class="dropbtn">Listar</button>
+        <div class="dropdown-content">
+          <a href="listClasses.php">Estudantes</a>
+          <a href="listClasses.php">Turmas</a>
+          <a href="listClasses.php">Escolas</a>
+        </div>
+      </div>
       </div>
       <p>
         Crud básico feito por 
