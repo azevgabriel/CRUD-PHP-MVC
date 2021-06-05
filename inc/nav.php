@@ -21,7 +21,7 @@
       <div class="nav-body">
         <a href="register.php">Cadastar</a>
         <br />
-        <a href="list.php">Listar</a>
+        <a href="listClasses.php">Listar</a>
       </div>
       <p>
         Crud básico feito por 

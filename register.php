@@ -1,5 +1,5 @@
 <?php
-  require_once 'config.php';
+  require_once 'src/lib/config.php';
   include(HEADER_TEMPLATE);
 ?>
     <article>

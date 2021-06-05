@@ -1,15 +1,15 @@
 <!--
 Esta é a camada de intereção com o usuário.
 -->
-<div>
-  <h2>Turmas</h2>
-
+<div class="table-Classes">
   <table>
     <thead>
       <th>Ano</th>
       <th>Nível</th>
       <th>Período/Série</th>
       <th>Turno</th>
+      <th>Alterar</th>
+      <th>Excluir</th>
     </thead>
     <tbody>
       <?php 
@@ -20,6 +20,8 @@ Esta é a camada de intereção com o usuário.
         <th><?php echo $row['level']; ?></th>
         <th><?php echo $row['series']; ?></th>
         <th><?php echo $row['shift']; ?></th>
+        <th>Alterar</th>
+        <th>Excluir</th>
       </tr>
       <?php
       }
