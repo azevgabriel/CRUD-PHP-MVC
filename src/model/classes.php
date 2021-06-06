@@ -13,9 +13,9 @@ class classesModel {
 		$Connection = new Connection();
 		$conn = $Connection->getConnect();
 		// Cria pesquisa no banco de dados.
-		$sql = "SELECT * FROM classes ";
+		$sql = "SELECT * FROM classes WHERE able = 1";
 		if(isset($search)){
-			$sql .= "WHERE `level` LIKE '%{$search}%' ";
+			$sql .= "OR `level` LIKE '%{$search}%' ";
 			$sql .= "OR `shift` LIKE '%{$search}%' ";
 			$sql .= "OR `series` LIKE '%{$search}%' ";
 			$sql .= "OR `year` LIKE '%{$search}%';";
@@ -34,7 +34,7 @@ class classesModel {
 		$Connection = new Connection();
 		$conn = $Connection->getConnect();
 		
-		$sql = "DELETE FROM `classes` WHERE `idClass` = {$id}";
+		$sql = "UPDATE classes set able = 0 WHERE idClass = $id";
 		$result = mysqli_query($conn, $sql);
 	}
 }
