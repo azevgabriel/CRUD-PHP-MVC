@@ -13,7 +13,7 @@
 			// Chama o método "getClasses" do Modelo de Turma
 			$resultClasses = $classesModel->getClasses($search);
 			/* Importa a Interface Gráfica das Turmas */
-			require_once 'classes_view.php'; 
+			require_once 'tableClasses.php'; 
 		}
 
 		/* Método refente à Remoção de uma Turma */
@@ -39,6 +39,5 @@
 			$classesModel = new classesModel();
 			$classesModel->createClass($year,$level,$series,$shift);
 		}
-
 	}
 ?>

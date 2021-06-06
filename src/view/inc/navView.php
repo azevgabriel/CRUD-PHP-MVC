@@ -24,17 +24,17 @@
         <div class="dropdown">
           <button class="dropbtn">Cadastar</button>
           <div class="dropdown-content">
-            <a href="registerClass.php">Estudante</a>
+            <a href="registerStudent.php">Estudante</a>
             <a href="registerClass.php">Turma</a>
-            <a href="registerClass.php">Escola</a>
+            <a href="registerSchool.php">Escola</a>
           </div>
         </div>
         <div class="dropdown">
           <button class="dropbtn">Listar</button>
           <div class="dropdown-content">
-            <a href="listClasses.php">Estudantes</a>
+            <a href="listStudents.php">Estudantes</a>
             <a href="listClasses.php">Turmas</a>
-            <a href="listClasses.php">Escolas</a>
+            <a href="listSchools.php">Escolas</a>
           </div>
         </div>
       </div>

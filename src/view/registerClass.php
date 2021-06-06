@@ -20,24 +20,32 @@
   <article class="form-update">
       <h2>Criação de Turma</h2>
       <form action="registerClass.php" method="post">
+          <label for="year">Ano</label>
           <input 
               type="text"             
               name="year" 
+              id="year"
               placeholder="Ex.: 1998"
           />
+          <label for="level">Nível</label>
           <input 
               type="text"            
               name="level" 
+              id="level"
               placeholder="Ex.: Ensino Superior"
           >
+          <label for="series">Período/Série</label>
           <input 
               type="text"               
-              name="series" 
+              name="series"
+              id="series"
               placeholder="Ex.: 7"
-          />                                        
+          />  
+          <label for="shift">Turno</label>                                      
           <input 
               type="text"             
-              name="shift" 
+              name="shift"
+              id="shift" 
               placeholder="Ex.: Diurno"
           />                    
           <input type="submit" value="Criar turma"/>                    

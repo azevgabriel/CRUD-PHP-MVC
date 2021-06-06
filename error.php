@@ -1,5 +1,5 @@
 <?php
-  /* Importa as Config */
+  /* Importa as CONFIGS */
   require_once 'src/lib/config.php';
   /* Importa o nav.php */
   include(HEADER_TEMPLATE);
