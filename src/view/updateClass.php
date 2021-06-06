@@ -1,9 +1,11 @@
 <?php
+    /* Importa o Controlador de Turmas e as CONFIGS */
     require_once '../controller/classesController.php';
     require_once '../lib/config.php';
     
     $classesController = new classesController(); 
    
+    /* Condições caso receberem um Método HTTP */
     if (isset($_POST["year"])){
         $id = $_POST["id"];
         $year = $_POST["year"];
@@ -18,6 +20,7 @@
         $row = mysqli_fetch_assoc($resultClass);
     }
 
+    /* Importa o navView.php */
     include(HEADER_VIEW_TEMPLATE);
 ?>
     <article class="form-update">
@@ -61,5 +64,6 @@
         </form>   
     </article>
 <?php
+    /* Importa o footer.php */
     include(FOOTER_VIEW_TEMPLATE);
 ?>

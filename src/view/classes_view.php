@@ -1,6 +1,3 @@
-<!--
-Esta é a camada de intereção com o usuário.
--->
 <div class="table-data">
   <table>
     <thead>

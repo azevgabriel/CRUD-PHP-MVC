@@ -1,9 +1,11 @@
 <?php
+  /* Importa o Controlador de Turmas e as CONFIGS */
   require_once '../controller/classesController.php';
   require_once '../lib/config.php';
   
   $classesController = new classesController(); 
 
+  /* Condições caso receberem um Método HTTP */
   if (isset($_POST["year"])){
     $year = $_POST["year"];
     $level = utf8_decode($_POST["level"]);
@@ -12,6 +14,7 @@
     $classesController -> create($year,$level,$series,$shift);
   }
 
+  /* Importa o navView.php */
   include(HEADER_VIEW_TEMPLATE);
 ?>
   <article class="form-update">
@@ -41,6 +44,7 @@
       </form>   
   </article>
 <?php
+  /* Importa o footer.php */
   include(FOOTER_VIEW_TEMPLATE);
 ?>
   
