@@ -1,7 +1,8 @@
 <!--
 Esta é a camada de intereção com o usuário.
 -->
-<div class="table-Classes">
+<div class="table-data">
+  <span><?php echo $resultRemove ?></span>
   <table>
     <thead>
       <th>Ano</th>
@@ -20,11 +21,19 @@ Esta é a camada de intereção com o usuário.
         <th><?php echo $row['level']; ?></th>
         <th><?php echo $row['series']; ?></th>
         <th><?php echo $row['shift']; ?></th>
-        <th>Alterar</th>
-        <th>Excluir</th>
+        <th>
+          <a href="#">
+            <img src="public/img/edit.svg" />
+          </a>
+        </th>
+        <th>
+          <a href="listClasses.php?idRem=<?php echo$row['idClass'] ?>">  
+            <img src="public/img/trash.svg" />
+          </a>
+        </th>
       </tr>
       <?php
-      }
+        }
       ?>
     </tbody>
   </table>

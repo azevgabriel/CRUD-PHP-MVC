@@ -106,9 +106,19 @@ article form {
   color:black;
 }
 
-article table th {
-  padding: .5rem;
+.table-data th {
+  padding: 0.2rem 1.2rem;
   border: solid 1px #c9d1b2;
+}
+
+.table-data tr img {
+  align-self: center;
+  width: 2rem;
+  padding: .1rem;
+}
+.table-data tr img:hover {
+  width: 2.0rem;
+  padding: 0rem;
 }
 
 .dropbtn {

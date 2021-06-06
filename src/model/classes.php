@@ -8,12 +8,6 @@ com Banco de Dados, as validações, etc.
 require_once 'src/lib/connection.php';
 
 class classesModel {
-	public $idClass;
-	public $year;
-	public $level;
-	public $series;
-	public $shift;
-	
 	public function getClasses($search) {
 		// Conecta com o banco de dados.
 		$Connection = new Connection();
@@ -34,6 +28,14 @@ class classesModel {
 		} else{
 			echo "Erro na listagem de Turmas.";
 		}
+	}
+	public function removeClass($id) {
+		// Conecta com o banco de dados.
+		$Connection = new Connection();
+		$conn = $Connection->getConnect();
+		
+		$sql = "DELETE FROM `classes` WHERE `idClass` = {$id}";
+		$result = mysqli_query($conn, $sql);
 	}
 }
 ?>
