@@ -1,8 +1,8 @@
 <?php
   require_once 'src/controller/classesController.php';
   require_once 'src/lib/config.php';
-
-  $classesController = new classesController(); 
+  
+  $classesController = new classesController();
 
   if (isset($_GET["searchInput"])){
     $searchInput = urlencode($_GET["searchInput"]);
@@ -14,14 +14,12 @@
 
   include(HEADER_TEMPLATE);
 ?>
-    <article>
+    <article class="form-search">
       <h1>Turmas</h1>
-      <br />
-      <form action="listClasses.php" method="get" class="search">
+      <form action="listClasses.php" method="get">
         <input type="text" name="searchInput" />
         <button type="submit"> Pesquisar </button>
       </form>
-      <br />
       <?php
         $classesController -> search($searchInput);
       ?>

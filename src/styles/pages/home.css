@@ -1,4 +1,4 @@
-.container{
+.container {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-nav {
+.container nav {
   width: 30%;
   height: 90%;
 
@@ -22,8 +22,8 @@ nav {
   border-radius: 2rem;
 }
 
-nav img {
-  width: 20rem;
+.container nav a img {
+  width: 16rem;
 }
 
 .nav-header {
@@ -41,19 +41,19 @@ nav img {
   color: #000;
 }
 
-nav p {
+.container nav p {
   padding: 1rem 3rem;
   text-align: justify;
 }
 
-nav p a {
+.container nav p a {
   text-decoration: none;
   font-weight: 600;
   color: black;
   transition: color 0.3s;
 }
 
-nav p a:hover {
+.container nav p a:hover {
   color: rgb(28, 46, 150);
 }
 
@@ -62,24 +62,50 @@ nav p a:hover {
   flex-direction: column;
 }
 
-article {
+.container article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 55%;
-  height: 90%;
- 
+  height: 90%; 
   background: rgba(236, 241, 221, 0.9);
   border-radius: 2rem;
   padding: 2rem;
 }
 
-article form {
+.form-search form {
   display: flex;
   flex-direction: row;
+  margin: 1rem 0;
 }
 
-.search input {
+.form-update form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-update form input {
+  width: 20rem;
+  height: 2rem;
+  margin-bottom: 0.4rem;
+  border: 0;
+  padding: 0.3rem;
+}
+
+.form-update form input:last-child {
+  background: rgb(28, 46, 150);
+  color: #fff;
+  padding: 0.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+}
+
+.form-update form input:last-child:hover {
+  background: #3e8e41;
+}
+
+.form-search form input {
   width: 30rem;
   height: 2.5rem;
   border: 0;
@@ -88,7 +114,7 @@ article form {
   border-bottom-left-radius: 2rem;
 }
 
-.search button {
+.form-search form button {
   margin-right: 2rem;
   height: 2.5rem;
   border: 0;
@@ -101,7 +127,7 @@ article form {
   border-bottom-right-radius: 2rem;
 }
 
-.search button:hover {
+.form-search form button:hover {
   background: white;
   color:black;
 }
@@ -128,11 +154,17 @@ article form {
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 1rem;
+  transition: border-radius 0.5s;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
+}
+
+.dropdown:first-child {
+  margin-bottom: 1rem; 
 }
 
 .dropdown-content {
@@ -146,7 +178,7 @@ article form {
 .dropdown-content a {
   color: black;
   width: 20rem;
-  padding: 1rem;
+  padding: 0.5rem;
   text-decoration: none;
   display: block;
 }
@@ -156,9 +188,14 @@ article form {
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }

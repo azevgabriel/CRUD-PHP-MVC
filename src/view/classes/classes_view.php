@@ -2,7 +2,6 @@
 Esta é a camada de intereção com o usuário.
 -->
 <div class="table-data">
-  <span><?php echo $resultRemove ?></span>
   <table>
     <thead>
       <th>Ano</th>
@@ -22,7 +21,7 @@ Esta é a camada de intereção com o usuário.
         <th><?php echo $row['series']; ?></th>
         <th><?php echo $row['shift']; ?></th>
         <th>
-          <a href="#">
+          <a href="updateClass.php?idUpd=<?php echo$row['idClass'] ?>">
             <img src="public/img/edit.svg" />
           </a>
         </th>

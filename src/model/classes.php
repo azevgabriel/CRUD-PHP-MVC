@@ -13,12 +13,15 @@ class classesModel {
 		$Connection = new Connection();
 		$conn = $Connection->getConnect();
 		// Cria pesquisa no banco de dados.
-		$sql = "SELECT * FROM classes WHERE able = 1";
+		$sql = "SELECT * FROM classes WHERE ";
 		if(isset($search)){
-			$sql .= "OR `level` LIKE '%{$search}%' ";
-			$sql .= "OR `shift` LIKE '%{$search}%' ";
-			$sql .= "OR `series` LIKE '%{$search}%' ";
-			$sql .= "OR `year` LIKE '%{$search}%';";
+			$sql .= "level LIKE '%{$search}%' ";
+			$sql .= "OR shift LIKE '%{$search}%' ";
+			$sql .= "OR series LIKE '%{$search}%' ";
+			$sql .= "OR year LIKE '%{$search}%' ";
+			$sql .= "AND able = 1";
+		}else {
+			$sql .= "able = 1";
 		}
 		//
 		$result = mysqli_query($conn, $sql); 
@@ -26,7 +29,7 @@ class classesModel {
 		if($result){
 			return $result;
 		} else{
-			echo "Erro na listagem de Turmas.";
+			header('Location: error.php');
 		}
 	}
 	public function removeClass($id) {
@@ -36,6 +39,53 @@ class classesModel {
 		
 		$sql = "UPDATE classes set able = 0 WHERE idClass = $id";
 		$result = mysqli_query($conn, $sql);
+		if($result){
+			header('Location: listClasses.php');
+		}else{ 
+			header('Location: error.php');
+		}
+	}
+	public function updateClass($id,$year,$level,$series,$shift) {
+		// Conecta com o banco de dados.
+		$Connection = new Connection();
+		$conn = $Connection->getConnect();
+		
+		$sql = "UPDATE classes set year = '$year', level = '$level'," ;
+		$sql .= "series = '$series', shift = '$shift' WHERE idClass = $id ";
+		$result = mysqli_query($conn, $sql);
+		if($result){
+			header('Location: listClasses.php');
+		}else{ 
+			header('Location: error.php');
+		}
+	}
+	public function getClass($id) {
+		// Conecta com o banco de dados.
+		$Connection = new Connection();
+		$conn = $Connection->getConnect();
+		// Cria pesquisa no banco de dados.
+		$sql = "SELECT * FROM classes WHERE idClass = $id";
+		$result = mysqli_query($conn, $sql); 
+
+		if($result){
+			return $result;
+		} else{
+			header('Location: error.php');
+		}
+	}
+	public function createClass($year,$level,$series,$shift) {
+		// Conecta com o banco de dados.
+		$Connection = new Connection();
+		$conn = $Connection->getConnect();
+		
+		$sql = "INSERT INTO classes (idClass,year,level,series,shift,able) ";
+		$sql .= "VALUES (NULL, '$year', '$level', '$series', '$shift', '1') ";
+		$result = mysqli_query($conn, $sql);
+		if($result){
+			header('Location: listClasses.php');
+		}else{ 
+			header('Location: error.php');
+		}
 	}
 }
 ?>
