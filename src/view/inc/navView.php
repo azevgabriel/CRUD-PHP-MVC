@@ -7,17 +7,17 @@
   <title>Student Controller</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="src/styles/global.css">
-  <link rel="stylesheet" href="src/styles/pages/home.css">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/pages/home.css">
 </head>
 <body>
   <div class="container">
     <nav>
-      <a href="index.php">
-        <img src="public/img/logo.svg" />
+      <a href="../../index.php">
+        <img src="../../public/img/logo.svg" />
       </a> 
       <div class="nav-header">
-        <img src="public/img/cap.svg" />
+        <img src="../../public/img/cap.svg" />
         <h1>Controle de Estudantes</h1>
       </div>
       <div class="nav-body">

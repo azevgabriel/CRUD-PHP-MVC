@@ -22,12 +22,12 @@ Esta é a camada de intereção com o usuário.
         <th><?php echo $row['shift']; ?></th>
         <th>
           <a href="updateClass.php?idUpd=<?php echo$row['idClass'] ?>">
-            <img src="public/img/edit.svg" />
+            <img src="../../public/img/edit.svg" />
           </a>
         </th>
         <th>
           <a href="listClasses.php?idRem=<?php echo$row['idClass'] ?>">  
-            <img src="public/img/trash.svg" />
+            <img src="../../public/img/trash.svg" />
           </a>
         </th>
       </tr>

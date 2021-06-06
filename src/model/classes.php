@@ -5,7 +5,7 @@ Aqui no Model é onde fica a parte lógica da aplicação.
 Aqui é o local onde seriam feitas as comunicações 
 com Banco de Dados, as validações, etc.
 */
-require_once 'src/lib/connection.php';
+require_once '../lib/connection.php';
 
 class classesModel {
 	public function getClasses($search) {

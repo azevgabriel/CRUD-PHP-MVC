@@ -1,6 +1,6 @@
 <?php
-  require_once 'src/controller/classesController.php';
-  require_once 'src/lib/config.php';
+  require_once '../controller/classesController.php';
+  require_once '../lib/config.php';
   
   $classesController = new classesController();
 
@@ -12,7 +12,7 @@
     $classesController -> remove($idRem);
   }
 
-  include(HEADER_TEMPLATE);
+  include(HEADER_VIEW_TEMPLATE);
 ?>
     <article class="form-search">
       <h1>Turmas</h1>
@@ -25,5 +25,5 @@
       ?>
     </article>
 <?php
-  include(FOOTER_TEMPLATE);
+  include(FOOTER_VIEW_TEMPLATE);
 ?>

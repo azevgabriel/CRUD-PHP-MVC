@@ -1,6 +1,6 @@
 <?php
-    require_once 'src/controller/classesController.php';
-    require_once 'src/lib/config.php';
+    require_once '../controller/classesController.php';
+    require_once '../lib/config.php';
     
     $classesController = new classesController(); 
    
@@ -18,7 +18,7 @@
         $row = mysqli_fetch_assoc($resultClass);
     }
 
-    include(HEADER_TEMPLATE);
+    include(HEADER_VIEW_TEMPLATE);
 ?>
     <article class="form-update">
         <h2>Alteração de Turma</h2>
@@ -61,5 +61,5 @@
         </form>   
     </article>
 <?php
-    include(FOOTER_TEMPLATE);
+    include(FOOTER_VIEW_TEMPLATE);
 ?>

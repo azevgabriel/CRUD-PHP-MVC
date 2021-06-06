@@ -3,7 +3,7 @@
   include(HEADER_TEMPLATE);
 ?>
   <article>
-    <h1>Erro no Banco de Dados</h1>
+    <h1>Aconteceu um Erro</h1>
   </article>
 <?php
   include(FOOTER_TEMPLATE);
