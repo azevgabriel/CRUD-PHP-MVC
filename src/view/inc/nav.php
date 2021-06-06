@@ -24,9 +24,9 @@
         <div class="dropdown">
           <button class="dropbtn">Cadastar</button>
           <div class="dropdown-content">
-            <a href="src/view/classes/registerClass.php">Estudante</a>
-            <a href="src/view/classes/registerClass.php">Turma</a>
-            <a href="src/view/classes/registerClass.php">Escola</a>
+            <a href="src/view/registerClass.php">Estudante</a>
+            <a href="src/view/registerClass.php">Turma</a>
+            <a href="src/view/registerClass.php">Escola</a>
           </div>
         </div>
         <div class="dropdown">
