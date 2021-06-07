@@ -7,6 +7,7 @@
    
     /* Condições caso receberem um Método HTTP */
     if (isset($_POST["name"])){
+        $id = $_POST["id"];
         $name = $_POST["name"];
         $phone = $_POST["phone"];
         $email = $_POST["email"];

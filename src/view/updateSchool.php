@@ -7,6 +7,7 @@
    
     /* Condições caso receberem um Método HTTP */
     if (isset($_POST["nameSchool"])){
+        $id = $_POST["id"];
         $nameSchool = $_POST["nameSchool"];
         $address = $_POST["address"];
         $schoolsController -> update($id,$nameSchool,$address);
@@ -28,18 +29,18 @@
                 type="text"             
                 name="nameSchool" 
                 id="nameSchool"
-                value="<?php echo utf8_encode($row["nameSchool"]) ?>" 
+                value="<?php echo $row["nameSchool"]?>" 
             />
             <label for="address">Endereço</label>
             <input 
                 type="text"            
                 name="address" 
                 id="address"
-                value="<?php echo utf8_encode($row["address"]) ?>" 
+                value="<?php echo $row["address"] ?>" 
             >  
             <input 
                 type="hidden" 
-                value="<?php echo utf8_encode($row["idSchool"]) ?>" 
+                value="<?php echo $row["idSchool"] ?>" 
                 name="id" 
                 id="id"
             />                       

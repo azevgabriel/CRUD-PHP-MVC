@@ -17,9 +17,9 @@
 			if(isset($search)){
 				$sql .= "nameSchool LIKE '%{$search}%' ";
 				$sql .= "OR address LIKE '%{$search}%' ";
-				$sql .= "AND able = 1";
+				$sql .= "AND able = 1 ORDER BY nameSchool ASC";
 			}else {
-				$sql .= "able = 1";
+				$sql .= "able = 1 ORDER BY nameSchool ASC";
 			}
 			/* Guarda o resultado do Banco de Dados */
 			$result = mysqli_query($conn, $sql); 
@@ -54,7 +54,7 @@
 			if($result){
 				header('Location:'.SUCCESS_SCHOOL);
 			}else{ 
-				header('Location:'.ERROR);
+				echo $id;		
 			}
 		}
 

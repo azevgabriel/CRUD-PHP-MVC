@@ -19,9 +19,9 @@
 				$sql .= "OR shift LIKE '%{$search}%' ";
 				$sql .= "OR series LIKE '%{$search}%' ";
 				$sql .= "OR year LIKE '%{$search}%' ";
-				$sql .= "AND able = 1";
+				$sql .= "AND able = 1 ORDER BY year ASC ";
 			}else {
-				$sql .= "able = 1";
+				$sql .= "able = 1  ORDER BY year ASC";
 			}
 			/* Guarda o resultado do Banco de Dados */
 			$result = mysqli_query($conn, $sql); 

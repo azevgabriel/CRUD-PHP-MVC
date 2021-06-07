@@ -20,9 +20,9 @@
 				$sql .= "OR email LIKE '%{$search}%' ";
 				$sql .= "OR gender LIKE '%{$search}%' ";
 				$sql .= "OR birthday LIKE '%{$search}%' ";
-				$sql .= "AND able = 1";
+				$sql .= "AND able = 1 ORDER BY name ASC";
 			}else {
-				$sql .= "able = 1";
+				$sql .= "able = 1 ORDER BY name ASC";
 			}
 			/* Guarda o resultado do Banco de Dados */
 			$result = mysqli_query($conn, $sql); 
@@ -58,7 +58,7 @@
 			if($result){
 				header('Location:'.SUCCESS_STUDENT);
 			}else{ 
-				header('Location:'.ERROR);
+				echo $id;
 			}
 		}
 
