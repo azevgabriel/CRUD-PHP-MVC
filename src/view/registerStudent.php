@@ -21,7 +21,7 @@
   <article class="form-update">
       <h2>Cadastro do Estudante</h2>
       <form action="registerStudent.php" method="post">
-          <label for="name">Nome</label>
+          <label for="name">Nome (Obrigatório)</label>
           <input 
               type="text"             
               name="name" 
@@ -35,7 +35,7 @@
               id="phone"
               placeholder="Ex.: (35) 98883-5605"
           >
-          <label for="email">E-Mail</label>
+          <label for="email">E-Mail (Obrigatório)</label>
           <input 
               type="text"               
               name="email"

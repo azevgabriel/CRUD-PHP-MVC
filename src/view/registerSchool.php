@@ -18,14 +18,14 @@
   <article class="form-update">
       <h2>Cadastro da Escola</h2>
       <form action="registerSchool.php" method="post">
-          <label for="nameSchool">Nome da Escola</label>
+          <label for="nameSchool">Nome da Escola (Obrigatório)</label>
           <input 
               type="text"             
               name="nameSchool" 
               id="nameSchool"
               placeholder="Ex.: Instituto Federal Sul de Minas..."
           />
-          <label for="address">Endereço</label>
+          <label for="address">Endereço (Obrigatório)</label>
           <input 
               type="text"            
               name="address" 

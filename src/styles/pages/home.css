@@ -72,6 +72,11 @@
   padding: 2rem;
 }
 
+.form-search {
+  width: 55%;
+  overflow: auto;
+}
+
 .form-search form {
   display: flex;
   flex-direction: row;
@@ -84,12 +89,17 @@
   flex-direction: column;
 }
 
+.form-update label {
+  padding: 0 0.4rem 0.1rem 0.4rem;
+}
+
 .form-update form input {
   width: 20rem;
   height: 2rem;
   margin-bottom: 0.4rem;
   border: 0;
-  padding: 0.3rem;
+  border-radius: 2rem;
+  padding: 0.3rem 0.5rem;
 }
 
 .form-update form input:last-child {
@@ -99,10 +109,13 @@
   height: 2.5rem;
   border-radius: 2rem;
   margin-top: 1rem;
+  transition: background 0.3s;
 }
 
 .form-update form input:last-child:hover {
   background: #3e8e41;
+  border: 2px solid #329936;
+  cursor: pointer;
 }
 
 .form-search form input {
@@ -133,8 +146,14 @@
 }
 
 .table-data th {
-  padding: 0.2rem 1.2rem;
+  padding: 0.1rem;
+  width: 5rem;
   border: solid 1px #c9d1b2;
+}
+
+.table-data thead th {
+  color:rgb(28, 46, 150);
+  border-color: rgb(28, 46, 150);
 }
 
 .table-data tr img {
@@ -168,19 +187,30 @@
 }
 
 .dropdown-content {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  transition: visibility 0s, opacity 0.2s linear;
+}
+
+.dropdown-content {
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 
 .dropdown-content a {
   color: black;
   width: 20rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   display: block;
+}
+
+.dropdown-content a:last-child {
+  padding-bottom: 1rem;
 }
 
 .dropdown-content a:hover {
@@ -188,6 +218,8 @@
 }
 
 .dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
   display: flex;
   flex-direction: column;
 }
