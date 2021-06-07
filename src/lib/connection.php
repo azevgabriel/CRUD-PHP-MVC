@@ -9,7 +9,8 @@
 
             /* Verifica se a conexão falhou ou não. */
             if (!$conn) {
-                header('Location:'.ERROR);
+                /* Caso a conexão falhar, mostrar o erro para o usuário. */
+                header('Location:'.ERROR.'?codError=5');
             } else  {
                 return $conn;
             }

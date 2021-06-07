@@ -27,48 +27,52 @@
     <article class="form-update">
         <h2>Alteração de Alunos</h2>
         <form action="updateStudent.php" method="post">
-            <label for="name">Nome</label>
-            <input 
-                type="text"             
-                name="name" 
-                id="name"
-                value="<?php echo $row["name"] ?>" 
-            />
-            <label for="phone">Telefone</label>
-            <input 
-                type="text"            
-                name="phone" 
-                id="phone"
-                value="<?php echo $row["phone"] ?>" 
-            >
-            <label for="email">E-Mail</label>
-            <input 
-                type="text"               
-                name="email"
-                id="email"
-                value="<?php echo $row["email"] ?>" 
-            />  
-            <label for="birthday">Data de Nascimento</label>                                      
-            <input 
-                type="text"             
-                name="birthday"
-                id="birthday" 
-                value="<?php echo $row["birthday"] ?>" 
-            />   
-            <label for="gender">Gênero</label>                                      
-            <input 
-                type="text"             
-                name="gender"
-                id="gender" 
-                value="<?php echo $row["gender"] ?>" 
-            />   
-            <input 
-                type="hidden" 
-                value="<?php echo $row["idStudent"] ?>" 
-                name="id" 
-                id="id"
-            />                      
-            <input type="submit" value="Confirmar alteração"/>                    
+            <div class="form-data">
+                <label for="name">Nome (Obrigatório)</label>
+                <input 
+                    type="text"             
+                    name="name" 
+                    id="name"
+                    value="<?php echo $row["name"] ?>" 
+                />
+                <label for="phone">Telefone</label>
+                <input 
+                    type="text"            
+                    name="phone" 
+                    id="phone"
+                    value="<?php echo $row["phone"] ?>" 
+                >
+                <label for="email">E-Mail (Obrigatório)</label>
+                <input 
+                    type="text"               
+                    name="email"
+                    id="email"
+                    value="<?php echo $row["email"] ?>" 
+                />  
+                <label for="birthday">Data de Nascimento</label>                                      
+                <input 
+                    type="text"             
+                    name="birthday"
+                    id="birthday" 
+                    value="<?php echo $row["birthday"] ?>" 
+                />   
+                <label for="gender">Gênero</label>                                      
+                <input 
+                    type="text"             
+                    name="gender"
+                    id="gender" 
+                    value="<?php echo $row["gender"] ?>" 
+                />   
+                <input 
+                    type="hidden" 
+                    value="<?php echo $row["idStudent"] ?>" 
+                    name="id" 
+                    id="id"
+                /> 
+            </div>     
+            <div class="form-submit">                
+                <input type="submit" value="Confirmar alteração"/>  
+            </div>                  
         </form>   
     </article>
 <?php

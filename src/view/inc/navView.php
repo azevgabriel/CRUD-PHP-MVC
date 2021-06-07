@@ -40,8 +40,8 @@
       </div>
       <p>
         CRUD básico feito por 
-        <a href="https://github.com/azevgabriel">Gabriel Azevedo</a>
-        , com o objetivo de desenvolver um sistema de controle de alunos de uma escola.
+        <a href="https://github.com/azevgabriel">Gabriel Azevedo</a>,
+        com o objetivo de desenvolver um sistema de controle de alunos de uma escola.
       </p>
     </nav>
     <!-- Nav de todas as VIEWS -->

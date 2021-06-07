@@ -26,41 +26,45 @@
     <article class="form-update">
         <h2>Alteração de Turma</h2>
         <form action="updateClass.php" method="post">
-            <label for="year">Ano</label>
-            <input 
-                type="text" 
-                value="<?php echo $row["year"] ?>" 
-                name="year" 
-                id="year"
-            />
-            <label for="level">Nível</label>
-            <input 
-                type="text" 
-                value="<?php echo $row["level"] ?>" 
-                name="level" 
-                id="level"
-            >
-            <label for="series">Período/Série</label>
-            <input 
-                type="text" 
-                value="<?php echo $row["series"] ?>" 
-                name="series" 
-                id="series"
-            />                                        
-            <label for="shift">Turno</label>
-            <input 
-                type="text" 
-                value="<?php echo $row["shift"] ?>" 
-                name="shift" 
-                id="shift"
-            />   
-            <input 
-                type="hidden" 
-                value="<?php echo $row["idClass"] ?>" 
-                name="id" 
-                id="id"
-            />                      
-            <input type="submit" value="Confirmar alteração"/>                    
+            <div class="form-data">
+                <label for="year">Ano (Obrigatório)</label>
+                <input 
+                    type="text" 
+                    value="<?php echo $row["year"] ?>" 
+                    name="year" 
+                    id="year"
+                />
+                <label for="level">Nível (Obrigatório)</label>
+                <input 
+                    type="text" 
+                    value="<?php echo $row["level"] ?>" 
+                    name="level" 
+                    id="level"
+                >
+                <label for="series">Período/Série (Obrigatório)</label>
+                <input 
+                    type="text" 
+                    value="<?php echo $row["series"] ?>" 
+                    name="series" 
+                    id="series"
+                />                                        
+                <label for="shift">Turno</label>
+                <input 
+                    type="text" 
+                    value="<?php echo $row["shift"] ?>" 
+                    name="shift" 
+                    id="shift"
+                />   
+                <input 
+                    type="hidden" 
+                    value="<?php echo $row["idClass"] ?>" 
+                    name="id" 
+                    id="id"
+                />
+            </div>
+            <div class="form-submit">                      
+                <input type="submit" value="Confirmar alteração"/>
+            </div>                    
         </form>   
     </article>
 <?php

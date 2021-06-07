@@ -4,7 +4,6 @@
 	require_once '../lib/connection.php';
 
 	/* Classe Modelo para Turmas */
-	/* Local onde é feita a comunição com Banco de Dados */
 	class classesModel {
 
 		/* Método de Busca as Turmas no Banco de Dados */
@@ -15,10 +14,10 @@
 			/* Cria uma pesquisa no banco de dados. */
 			$sql = "SELECT * FROM classes WHERE ";
 			if(isset($search)){
-				$sql .= "level LIKE '%{$search}%' ";
+				$sql .= "(level LIKE '%{$search}%' ";
 				$sql .= "OR shift LIKE '%{$search}%' ";
 				$sql .= "OR series LIKE '%{$search}%' ";
-				$sql .= "OR year LIKE '%{$search}%' ";
+				$sql .= "OR year LIKE '%{$search}%') ";
 				$sql .= "AND able = 1 ORDER BY year ASC ";
 			}else {
 				$sql .= "able = 1  ORDER BY year ASC";
@@ -29,7 +28,8 @@
 			if($result){
 				return $result;
 			} else{
-				header('Location:'.ERROR);
+				/* Tratativa de Erro */
+				header('Location:'.ERROR.'?codError=1');
 			}
 		}
 
@@ -42,21 +42,25 @@
 			if($result){
 				header('Location:'.SUCCESS_CLASS);
 			}else{ 
-				header('Location:'.ERROR);
+				header('Location:'.ERROR.'?codError=4');
 			}
 		}
 
 		/* Método de Update de uma Turma no Banco de Dados */
 		public function updateClass($id,$year,$level,$series,$shift) {
-			$Connection = new Connection();
-			$conn = $Connection->getConnect();
-			$sql = "UPDATE classes set year = '$year', level = '$level', " ;
-			$sql .= "series = '$series', shift = '$shift' WHERE idClass = $id ";
-			$result = mysqli_query($conn, $sql);
-			if($result){
-				header('Location:'.SUCCESS_CLASS);
-			}else{ 
-				header('Location:'.ERROR);
+			if(($year != "") && ($level != "") && ($series != "")){
+				$Connection = new Connection();
+				$conn = $Connection->getConnect();
+				$sql = "UPDATE classes set year = '$year', level = '$level', " ;
+				$sql .= "series = '$series', shift = '$shift' WHERE idClass = $id ";
+				$result = mysqli_query($conn, $sql);
+				if($result){
+					header('Location:'.SUCCESS_CLASS);
+				}else{ 
+					header('Location:'.ERROR.'?codError=3');
+				}
+			} else {
+				header('Location:'.ERROR.'?codError=6');
 			}
 		}
 
@@ -69,21 +73,25 @@
 			if($result){
 				return $result;
 			} else{
-				header('Location:'.ERROR);
+				header('Location:'.ERROR.'?codError=1');
 			}
 		}
 
-		/* Método de Criação de Turma no Banco de Dados */
+		/* Método de Criação de uma Turma no Banco de Dados */
 		public function createClass($year,$level,$series,$shift) {
-			$Connection = new Connection();
-			$conn = $Connection->getConnect();
-			$sql = "INSERT INTO classes (idClass,year,level,series,shift,able) ";
-			$sql .= "VALUES (NULL, '$year', '$level', '$series', '$shift', '1') ";
-			$result = mysqli_query($conn, $sql);
-			if($result){
-				header('Location:'.SUCCESS_CLASS);
-			}else{ 
-				header('Location:'.ERROR);
+			if(($year != "") && ($level != "") && ($series != "")){
+				$Connection = new Connection();
+				$conn = $Connection->getConnect();
+				$sql = "INSERT INTO classes (idClass,year,level,series,shift,able) ";
+				$sql .= "VALUES (NULL, '$year', '$level', '$series', '$shift', '1') ";
+				$result = mysqli_query($conn, $sql);
+				if($result){
+					header('Location:'.SUCCESS_CLASS);
+				}else{ 
+					header('Location:'.ERROR.'?codError=2');
+				}
+			} else {
+				header('Location:'.ERROR.'?codError=6');
 			}
 		}
 

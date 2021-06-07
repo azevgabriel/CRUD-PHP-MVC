@@ -18,21 +18,25 @@
   <article class="form-update">
       <h2>Cadastro da Escola</h2>
       <form action="registerSchool.php" method="post">
-          <label for="nameSchool">Nome da Escola (Obrigatório)</label>
-          <input 
-              type="text"             
-              name="nameSchool" 
-              id="nameSchool"
-              placeholder="Ex.: Instituto Federal Sul de Minas..."
-          />
-          <label for="address">Endereço (Obrigatório)</label>
-          <input 
-              type="text"            
-              name="address" 
-              id="address"
-              placeholder="Ex.: Av. Dirce Pereira Rosa, 300..."
-          >         
-          <input type="submit" value="Cadastrar escola"/>                    
+          <div class="form-data">
+            <label for="nameSchool">Nome da Escola (Obrigatório)</label>
+            <input 
+                type="text"             
+                name="nameSchool" 
+                id="nameSchool"
+                placeholder=" Instituto Federal Sul de Minas ..."
+            />
+            <label for="address">Endereço (Obrigatório)</label>
+            <input 
+                type="text"            
+                name="address" 
+                id="address"
+                placeholder=" Av. Dirce Pereira Rosa, 300 ..."
+            >   
+          </div>   
+          <div class="form-submit">   
+            <input type="submit" value="Cadastrar escola"/>   
+          </div>                 
       </form>   
   </article>
 <?php

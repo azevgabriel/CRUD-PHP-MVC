@@ -21,42 +21,46 @@
   <article class="form-update">
       <h2>Cadastro do Estudante</h2>
       <form action="registerStudent.php" method="post">
-          <label for="name">Nome (Obrigatório)</label>
-          <input 
-              type="text"             
-              name="name" 
-              id="name"
-              placeholder="Ex.: Gabriel Azevedo"
-          />
-          <label for="phone">Telefone</label>
-          <input 
-              type="text"            
-              name="phone" 
-              id="phone"
-              placeholder="Ex.: (35) 98883-5605"
-          >
-          <label for="email">E-Mail (Obrigatório)</label>
-          <input 
-              type="text"               
-              name="email"
-              id="email"
-              placeholder="Ex.: azevgabriel@gmail.com"
-          />  
-          <label for="birthday">Data de Nascimento</label>                                      
-          <input 
-              type="text"             
-              name="birthday"
-              id="birthday" 
-              placeholder="Ex.: 1999-06-01"
-          />   
-          <label for="gender">Gênero</label>                                      
-          <input 
-              type="text"             
-              name="gender"
-              id="gender" 
-              placeholder="Ex.: Masculino"
-          />                     
-          <input type="submit" value="Cadastrar estudante"/>                    
+          <div class="form-data">
+            <label for="name">Nome (Obrigatório)</label>
+            <input 
+                type="text"             
+                name="name" 
+                id="name"
+                placeholder=" Ion Coimbra Santos"
+            />
+            <label for="phone">Telefone</label>
+            <input 
+                type="text"            
+                name="phone" 
+                id="phone"
+                placeholder=" +55 (XX) X.XXXX-XXXX"
+            >
+            <label for="email">E-Mail (Obrigatório)</label>
+            <input 
+                type="text"               
+                name="email"
+                id="email"
+                placeholder=" exemplo@alunos.edu.com"
+            />  
+            <label for="birthday">Data de Nascimento</label>                                      
+            <input 
+                type="text"             
+                name="birthday"
+                id="birthday" 
+                placeholder=" XX/XX/XXXX"
+            />   
+            <label for="gender">Gênero</label>                                      
+            <input 
+                type="text"             
+                name="gender"
+                id="gender" 
+                placeholder=" Masculino"
+            />  
+          </div>  
+          <div class="form-submit">                 
+            <input type="submit" value="Cadastrar estudante"/> 
+          </div>                   
       </form>   
   </article>
 <?php

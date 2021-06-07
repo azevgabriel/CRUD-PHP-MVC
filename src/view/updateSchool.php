@@ -24,27 +24,31 @@
     <article class="form-update">
         <h2>Alteração de Escolas</h2>
         <form action="updateSchool.php" method="post">
-            <label for="nameSchool">Nome da Escola</label>
-            <input 
-                type="text"             
-                name="nameSchool" 
-                id="nameSchool"
-                value="<?php echo $row["nameSchool"]?>" 
-            />
-            <label for="address">Endereço</label>
-            <input 
-                type="text"            
-                name="address" 
-                id="address"
-                value="<?php echo $row["address"] ?>" 
-            >  
-            <input 
-                type="hidden" 
-                value="<?php echo $row["idSchool"] ?>" 
-                name="id" 
-                id="id"
-            />                       
-            <input type="submit" value="Confirmar alteração"/>                    
+            <div class="form-data">
+                <label for="nameSchool">Nome da Escola (Obrigatório)</label>
+                <input 
+                    type="text"             
+                    name="nameSchool" 
+                    id="nameSchool"
+                    value="<?php echo $row["nameSchool"]?>" 
+                />
+                <label for="address">Endereço (Obrigatório)</label>
+                <input 
+                    type="text"            
+                    name="address" 
+                    id="address"
+                    value="<?php echo $row["address"] ?>" 
+                >  
+                <input 
+                    type="hidden" 
+                    value="<?php echo $row["idSchool"] ?>" 
+                    name="id" 
+                    id="id"
+                />       
+            </div>
+            <div class="form-submit">                
+                <input type="submit" value="Confirmar alteração"/>      
+            </div>              
         </form>   
     </article>
 <?php

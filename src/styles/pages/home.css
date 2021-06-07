@@ -1,3 +1,6 @@
+/*************** START ***************/
+/* CSS referente à TELA TOTAL */
+
 .container {
   height: 100vh;
   width: 100vw;
@@ -7,6 +10,11 @@
 
   align-items: center;
 }
+
+/* CSS referente à TELA TOTAL */
+/**************** END ****************/
+/*************** START ***************/
+/* CSS referente ao MENU  */
 
 .container nav {
   width: 30%;
@@ -43,7 +51,7 @@
 
 .container nav p {
   padding: 1rem 3rem;
-  text-align: justify;
+  text-align: right;
 }
 
 .container nav p a {
@@ -62,6 +70,11 @@
   flex-direction: column;
 }
 
+/* CSS referente ao MENU */
+/**************** END ****************/
+/*************** START ***************/
+/* CSS referente ao display de CRUD */
+
 .container article {
   display: flex;
   flex-direction: column;
@@ -72,50 +85,35 @@
   padding: 2rem;
 }
 
+/* CSS referente ao display de CRUD */
+/**************** END ****************/
+/*************** START ***************/
+/* CSS referente ao display de ERROR */
+
+.error {
+  width: 35%;
+}
+
+.error h1 {
+  color: rgb(204, 10, 10);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* CSS referente ao display de CRUD */
+/**************** END ****************/
+/*************** START ***************/
+/* CSS referente à barra de Pesquisa */
+
 .form-search {
-  width: 55%;
+  width: 60%;
   overflow: auto;
 }
 
 .form-search form {
   display: flex;
   flex-direction: row;
-  margin: 1rem 0;
-}
-
-.form-update form {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-update label {
-  padding: 0 0.4rem 0.1rem 0.4rem;
-}
-
-.form-update form input {
-  width: 20rem;
-  height: 2rem;
-  margin-bottom: 0.4rem;
-  border: 0;
-  border-radius: 2rem;
-  padding: 0.3rem 0.5rem;
-}
-
-.form-update form input:last-child {
-  background: rgb(28, 46, 150);
-  color: #fff;
-  padding: 0.5rem;
-  height: 2.5rem;
-  border-radius: 2rem;
-  margin-top: 1rem;
-  transition: background 0.3s;
-}
-
-.form-update form input:last-child:hover {
-  background: #3e8e41;
-  border: 2px solid #329936;
-  cursor: pointer;
+  margin: 1.3rem 0;
 }
 
 .form-search form input {
@@ -145,14 +143,72 @@
   color:black;
 }
 
+/* CSS referente à barra de Pesquisa */
+/**************** END ****************/
+/*************** START ***************/
+/* CSS referente ao FORMULÁRIO de CADASTRO E UPDATE */
+
+.form-update form {
+  height: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-data, .form-submit {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-update label {
+  padding: 0 0 0.2rem 0.3rem;
+}
+
+.form-data input {
+  width: 20rem;
+  height: 2rem;
+  margin-bottom: 0.4rem;
+  border: 0;
+  border-radius: 2rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.form-data input:hover {
+  background: rgb(243, 227, 193);
+}
+
+.form-submit input {
+  background: rgb(28, 46, 150);
+  color: #fff;
+  padding: 0.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.form-submit input:hover {
+  background: #3e8e41;
+  border: 2px solid #329936;
+  cursor: pointer;
+}
+
+/* CSS referente ao FORMULÁRIO de CADASTRO E UPDATE */
+/**************** END ****************/
+/*************** START ***************/
+/* CSS referente aos DADOS na TABELA */
+
 .table-data th {
-  padding: 0.1rem;
-  width: 5rem;
+  padding: 0.3rem;
+  width: 10rem;
   border: solid 1px #c9d1b2;
+  border-radius: 1rem;
 }
 
 .table-data thead th {
-  color:rgb(28, 46, 150);
+  color:#fff;
+  background: rgb(28, 46, 150);
   border-color: rgb(28, 46, 150);
 }
 
@@ -165,6 +221,11 @@
   width: 2.0rem;
   padding: 0rem;
 }
+
+/* CSS referente aos DADOS na TABELA */
+/**************** END ****************/
+/*************** START ***************/
+/* CSS referente aos BUTTONS do MENU */
 
 .dropbtn {
   background-color: rgb(28, 46, 150);
@@ -231,3 +292,6 @@
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
+
+/* CSS referente aos BUTTONS do MENU */
+/**************** END ****************/
