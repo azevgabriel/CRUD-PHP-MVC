@@ -32,39 +32,39 @@
                 type="text"             
                 name="name" 
                 id="name"
-                value="<?php echo utf8_encode($row["name"]) ?>" 
+                value="<?php echo $row["name"] ?>" 
             />
             <label for="phone">Telefone</label>
             <input 
                 type="text"            
                 name="phone" 
                 id="phone"
-                value="<?php echo utf8_encode($row["phone"]) ?>" 
+                value="<?php echo $row["phone"] ?>" 
             >
             <label for="email">E-Mail</label>
             <input 
                 type="text"               
                 name="email"
                 id="email"
-                value="<?php echo utf8_encode($row["email"]) ?>" 
+                value="<?php echo $row["email"] ?>" 
             />  
             <label for="birthday">Data de Nascimento</label>                                      
             <input 
                 type="text"             
                 name="birthday"
                 id="birthday" 
-                value="<?php echo utf8_encode($row["birthday"]) ?>" 
+                value="<?php echo $row["birthday"] ?>" 
             />   
             <label for="gender">Gênero</label>                                      
             <input 
                 type="text"             
                 name="gender"
                 id="gender" 
-                value="<?php echo utf8_encode($row["gender"]) ?>" 
+                value="<?php echo $row["gender"] ?>" 
             />   
             <input 
                 type="hidden" 
-                value="<?php echo utf8_encode($row["idStudent"]) ?>" 
+                value="<?php echo $row["idStudent"] ?>" 
                 name="id" 
                 id="id"
             />                      

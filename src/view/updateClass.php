@@ -29,34 +29,34 @@
             <label for="year">Ano</label>
             <input 
                 type="text" 
-                value="<?php echo utf8_encode($row["year"]) ?>" 
+                value="<?php echo $row["year"] ?>" 
                 name="year" 
                 id="year"
             />
             <label for="level">Nível</label>
             <input 
                 type="text" 
-                value="<?php echo utf8_encode($row["level"]) ?>" 
+                value="<?php echo $row["level"] ?>" 
                 name="level" 
                 id="level"
             >
             <label for="series">Período/Série</label>
             <input 
                 type="text" 
-                value="<?php echo utf8_encode($row["series"]) ?>" 
+                value="<?php echo $row["series"] ?>" 
                 name="series" 
                 id="series"
             />                                        
             <label for="shift">Turno</label>
             <input 
                 type="text" 
-                value="<?php echo utf8_encode($row["shift"]) ?>" 
+                value="<?php echo $row["shift"] ?>" 
                 name="shift" 
                 id="shift"
             />   
             <input 
                 type="hidden" 
-                value="<?php echo utf8_encode($row["idClass"]) ?>" 
+                value="<?php echo $row["idClass"] ?>" 
                 name="id" 
                 id="id"
             />                      

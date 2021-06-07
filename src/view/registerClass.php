@@ -8,9 +8,9 @@
   /* Condições caso receberem um Método HTTP */
   if (isset($_POST["year"])){
     $year = $_POST["year"];
-    $level = utf8_decode($_POST["level"]);
+    $level = $_POST["level"];
     $series = $_POST["series"];
-    $shift = utf8_decode($_POST["shift"]);
+    $shift = $_POST["shift"];
     $classesController -> create($year,$level,$series,$shift);
   }
 
