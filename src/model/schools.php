@@ -16,9 +16,9 @@
 			if(isset($search)){
 				$sql .= "(nameSchool LIKE '%{$search}%' ";
 				$sql .= "OR address LIKE '%{$search}%') ";
-				$sql .= "AND able = 1 ORDER BY nameSchool ASC";
+				$sql .= "AND ableSchool = 1 ORDER BY nameSchool ASC";
 			}else {
-				$sql .= "able = 1 ORDER BY nameSchool ASC";
+				$sql .= "ableSchool = 1 ORDER BY nameSchool ASC";
 			}
 			/* Guarda o resultado do Banco de Dados */
 			$result = mysqli_query($conn, $sql); 
@@ -35,7 +35,7 @@
 		public function removeSchool($id) {
 			$Connection = new Connection();
 			$conn = $Connection->getConnect();
-			$sql = "UPDATE schools set able = 0 WHERE idSchool = $id";
+			$sql = "UPDATE schools set ableSchool = 0 WHERE idSchool = $id";
 			$result = mysqli_query($conn, $sql);
 			if($result){
 				header('Location:'.SUCCESS_SCHOOL);
@@ -58,7 +58,7 @@
 					header('Location:'.ERROR.'?codError=3');		
 				}
 			} else {
-				header('Location:'.ERROR.'?codError=6');
+				header('Location:'.ERROR.'?codError=8');
 			}
 		}
 
@@ -75,13 +75,37 @@
 			}
 		}
 
+		public function getClassesInSchool($idSchool) {
+			$Connection = new Connection();
+			$conn = $Connection->getConnect();
+			$sql = "SELECT * FROM `relationship_classes_schools` WHERE `idSchool` = $idSchool ";
+			$result = mysqli_query($conn, $sql); 
+			if($result){
+				return $result;
+			} else{
+				header('Location:'.ERROR.'?codError=1');
+			}
+		}
+
+		public function getStudentsInClass($idClass) {
+			$Connection = new Connection();
+			$conn = $Connection->getConnect();
+			$sql = "SELECT * FROM `relationship_students_classes` WHERE `idClass` = $idClass ";
+			$result = mysqli_query($conn, $sql); 
+			if($result){
+				return $result;
+			} else{
+				header('Location:'.ERROR.'?codError=1');
+			}
+		}
+
 		/* Método de Criação de uma Escola no Banco de Dados */
 		public function createSchool($nameSchool,$address) {
 			if(($nameSchool != "") && ($address != "")){
 				$Connection = new Connection();
 				$conn = $Connection->getConnect();
-				$sql = "INSERT INTO schools (idSchool,nameSchool,address,able) ";
-				$sql .= "VALUES (NULL, '$nameSchool', '$address', '1') ";
+				$sql = "INSERT INTO schools (idSchool,ableSchool,nameSchool,address) ";
+				$sql .= "VALUES (NULL, '1', '$nameSchool', '$address') ";
 				$result = mysqli_query($conn, $sql);
 				if($result){
 					header('Location:'.SUCCESS_SCHOOL);
@@ -89,7 +113,7 @@
 					header('Location:'.ERROR.'?codError=2');
 				}
 			} else {
-				header('Location:'.ERROR.'?codError=6');
+				header('Location:'.ERROR.'?codError=9');
 			}
 		}
 

@@ -34,7 +34,7 @@
                 type="text"            
                 name="phone" 
                 id="phone"
-                placeholder=" +55 (XX) X.XXXX-XXXX"
+                placeholder=" +55 (xx) xxxxx-xxxx"
             >
             <label for="email">E-Mail (Obrigatório)</label>
             <input 
@@ -48,7 +48,7 @@
                 type="text"             
                 name="birthday"
                 id="birthday" 
-                placeholder=" XX/XX/XXXX"
+                placeholder=" xxxx-xx-xx"
             />   
             <label for="gender">Gênero</label>                                      
             <input 

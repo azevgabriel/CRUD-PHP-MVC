@@ -18,9 +18,9 @@
 				$sql .= "OR shift LIKE '%{$search}%' ";
 				$sql .= "OR series LIKE '%{$search}%' ";
 				$sql .= "OR year LIKE '%{$search}%') ";
-				$sql .= "AND able = 1 ORDER BY year ASC ";
+				$sql .= "AND ableClass = 1 ORDER BY year ASC ";
 			}else {
-				$sql .= "able = 1  ORDER BY year ASC";
+				$sql .= "ableClass = 1  ORDER BY year ASC";
 			}
 			/* Guarda o resultado do Banco de Dados */
 			$result = mysqli_query($conn, $sql); 
@@ -37,7 +37,7 @@
 		public function removeClass($id) {
 			$Connection = new Connection();
 			$conn = $Connection->getConnect();
-			$sql = "UPDATE classes set able = 0 WHERE idClass = $id";
+			$sql = "UPDATE classes set ableClass = 0 WHERE idClass = $id";
 			$result = mysqli_query($conn, $sql);
 			if($result){
 				header('Location:'.SUCCESS_CLASS);
@@ -82,8 +82,8 @@
 			if(($year != "") && ($level != "") && ($series != "")){
 				$Connection = new Connection();
 				$conn = $Connection->getConnect();
-				$sql = "INSERT INTO classes (idClass,year,level,series,shift,able) ";
-				$sql .= "VALUES (NULL, '$year', '$level', '$series', '$shift', '1') ";
+				$sql = "INSERT INTO classes (idClass,ableClass,year,level,series,shift) ";
+				$sql .= "VALUES (NULL, '1','$year', '$level', '$series', '$shift') ";
 				$result = mysqli_query($conn, $sql);
 				if($result){
 					header('Location:'.SUCCESS_CLASS);
@@ -91,7 +91,7 @@
 					header('Location:'.ERROR.'?codError=2');
 				}
 			} else {
-				header('Location:'.ERROR.'?codError=6');
+				header('Location:'.ERROR.'?codError=7');
 			}
 		}
 

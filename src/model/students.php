@@ -19,9 +19,9 @@
 				$sql .= "OR email LIKE '%{$search}%' ";
 				$sql .= "OR gender LIKE '%{$search}%' ";
 				$sql .= "OR birthday LIKE '%{$search}%') ";
-				$sql .= "AND able = 1 ORDER BY name ASC";
+				$sql .= "AND ableStudent = 1 ORDER BY name ASC";
 			}else {
-				$sql .= "able = 1 ORDER BY name ASC";
+				$sql .= "ableStudent = 1 ORDER BY name ASC";
 			}
 			/* Guarda o resultado do Banco de Dados */
 			$result = mysqli_query($conn, $sql); 
@@ -38,7 +38,7 @@
 		public function removeStudent($id) {
 			$Connection = new Connection();
 			$conn = $Connection->getConnect();
-			$sql = "UPDATE students set able = 0 WHERE idStudent = $id";
+			$sql = "UPDATE students set ableStudent = 0 WHERE idStudent = $id";
 			$result = mysqli_query($conn, $sql);
 			if($result){
 				header('Location:'.SUCCESS_STUDENT);
@@ -62,7 +62,7 @@
 					header('Location:'.ERROR.'?codError=3');
 				}
 			} else {
-				header('Location:'.ERROR.'?codError=6');
+				header('Location:'.ERROR.'?codError=10');
 			}
 		}
 
@@ -84,8 +84,8 @@
 			if(($name != "") && ($email != "")){
 				$Connection = new Connection();
 				$conn = $Connection->getConnect();
-				$sql = "INSERT INTO students (idStudent,name,phone,email,birthday,gender,able) ";
-				$sql .= "VALUES (NULL, '$name', '$phone', '$email', '$birthday','$gender', '1') ";
+				$sql = "INSERT INTO students (idStudent,ableStudent,name,phone,email,birthday,gender) ";
+				$sql .= "VALUES (NULL, '1', '$name', '$phone', '$email', '$birthday','$gender') ";
 				$result = mysqli_query($conn, $sql);
 				if($result){
 					header('Location:'.SUCCESS_STUDENT);
@@ -93,7 +93,7 @@
 					header('Location:'.ERROR.'?codError=2');
 				}
 			} else {
-				header('Location:'.ERROR.'?codError=6');
+				header('Location:'.ERROR.'?codError=11');
 			}
 		}
 
