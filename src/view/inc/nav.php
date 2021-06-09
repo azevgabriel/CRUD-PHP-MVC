@@ -24,7 +24,7 @@
         <div class="dropdown">
           <button class="dropbtn">Cadastar</button>
           <div class="dropdown-content">
-            <a href="src/view/registerStudent.php">Estudante</a>
+            <a href="src/view/registerStudent.php">Aluno</a>
             <a href="src/view/registerClass.php">Turma</a>
             <a href="src/view/registerSchool.php">Escola</a>
           </div>
@@ -32,7 +32,7 @@
         <div class="dropdown">
           <button class="dropbtn">Listar</button>
           <div class="dropdown-content">
-            <a href="src/view/listStudents.php">Estudantes</a>
+            <a href="src/view/listStudents.php">Alunos</a>
             <a href="src/view/listClasses.php">Turmas</a>
             <a href="src/view/listSchools.php">Escolas</a>
           </div>
