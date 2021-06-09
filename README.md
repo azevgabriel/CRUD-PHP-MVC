@@ -1,13 +1,13 @@
 
 
 <p align="center" float="left">
-  <img  src="public/img/screenshot_01.png" height="300" />
-  <img  src="public/img/screenshot_02.png" height="300" />
-  <img  src="public/img/screenshot_03.png" height="300" />
+  <img  src="public/img/screenshot_01.png" height="350" />
+  <img  src="public/img/screenshot_02.png" height="350" />
+  <img  src="public/img/screenshot_03.png" height="350" />
 </p>
 <p align="center" float="left">
-  <img  src="public/img/screenshot_04.png" height="300" />
-  <img  src="public/img/screenshot_05.png" height="300" />
+  <img  src="public/img/screenshot_04.png" height="350" />
+  <img  src="public/img/screenshot_05.png" height="350" />
 </p>
 
 <h1 align="center">CRUD-PHP-MVC</h1>
