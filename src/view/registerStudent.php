@@ -48,7 +48,7 @@
                 type="text"             
                 name="birthday"
                 id="birthday" 
-                placeholder=" xxxx-xx-xx"
+                placeholder=" xx/xx/xxxx"
             />   
             <label for="gender">Gênero</label>                                      
             <input 

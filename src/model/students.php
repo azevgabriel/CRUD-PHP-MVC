@@ -59,7 +59,7 @@
 				if($result){
 					header('Location:'.SUCCESS_STUDENT);
 				}else{ 
-					header('Location:'.ERROR.'?codError=3');
+					header('Location:'.ERROR.'?codError=15');
 				}
 			} else {
 				header('Location:'.ERROR.'?codError=10');
@@ -80,7 +80,7 @@
 		}
 
 		/* Método de Criação de um Aluno no Banco de Dados */
-		public function createStudent($name,$phone,$email,$birthday,$gender) {
+		public function createStudent($name,$phone,$email,$birthday,$gender) {		
 			if(($name != "") && ($email != "")){
 				$Connection = new Connection();
 				$conn = $Connection->getConnect();
@@ -90,7 +90,7 @@
 				if($result){
 					header('Location:'.SUCCESS_STUDENT);
 				}else{ 
-					header('Location:'.ERROR.'?codError=2');
+					header('Location:'.ERROR.'?codError=14');
 				}
 			} else {
 				header('Location:'.ERROR.'?codError=11');

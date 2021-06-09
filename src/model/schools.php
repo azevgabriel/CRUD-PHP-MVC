@@ -55,7 +55,7 @@
 				if($result){
 					header('Location:'.SUCCESS_SCHOOL);
 				}else{ 
-					header('Location:'.ERROR.'?codError=3');		
+					header('Location:'.ERROR.'?codError=13');		
 				}
 			} else {
 				header('Location:'.ERROR.'?codError=8');
@@ -110,7 +110,7 @@
 				if($result){
 					header('Location:'.SUCCESS_SCHOOL);
 				}else{ 
-					header('Location:'.ERROR.'?codError=2');
+					header('Location:'.ERROR.'?codError=12');
 				}
 			} else {
 				header('Location:'.ERROR.'?codError=9');

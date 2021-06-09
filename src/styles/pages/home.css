@@ -108,8 +108,10 @@
 }
 
 .error p {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  text-align: justify;
   margin-bottom: 3rem;
+  font-weight: 600;
 }
 
 .error a {
@@ -227,13 +229,13 @@
   padding: 0.3rem;
   width: 10rem;
   border: solid 1px #c9d1b2;
-  border-radius: 1rem;
 }
 
 .table-data thead th {
   color:#fff;
   background: rgb(28, 46, 150);
   border-color: rgb(28, 46, 150);
+  border-radius: 0.2rem;
 }
 
 .table-data tr img {

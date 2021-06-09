@@ -2,6 +2,7 @@
 
 	/* Importa a Classe de Conexão */
 	require_once '../lib/connection.php';
+	require_once '../lib/checkData.php';
 
 	/* Classe Modelo para Turmas */
 	class classesModel {
