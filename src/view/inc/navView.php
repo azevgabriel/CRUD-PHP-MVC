@@ -22,7 +22,7 @@
       </div>
       <div class="nav-body">
         <div class="dropdown">
-          <button class="dropbtn">Cadastar</button>
+          <button class="dropbtn">Cadastrar</button>
           <div class="dropdown-content">
             <a href="registerStudent.php">Aluno</a>
             <a href="registerClass.php">Turma</a>

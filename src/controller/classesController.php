@@ -39,5 +39,6 @@
 			$classesModel = new classesModel();
 			$classesModel->createClass($year,$level,$series,$shift);
 		}
+		
 	}
 ?>
