@@ -19,7 +19,7 @@
   include(HEADER_VIEW_TEMPLATE);
 ?>
   <article class="form-update">
-      <h2>Cadastro do Estudante</h2>
+      <h2>Cadastro do Aluno</h2>
       <form action="registerStudent.php" method="post">
           <div class="form-data">
             <label for="name">Nome (Obrigatório)</label>
@@ -59,7 +59,7 @@
             />  
           </div>  
           <div class="form-submit">                 
-            <input type="submit" value="Cadastrar estudante"/> 
+            <input type="submit" value="Cadastrar aluno"/> 
           </div>                   
       </form>   
   </article>

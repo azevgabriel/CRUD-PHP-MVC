@@ -22,7 +22,7 @@
     include(HEADER_VIEW_TEMPLATE);
 ?>
     <article class="form-update">
-        <h2>Alteração de Escolas</h2>
+        <h2>Alteração da Escola</h2>
         <form action="updateSchool.php" method="post">
             <div class="form-data">
                 <label for="nameSchool">Nome da Escola (Obrigatório)</label>

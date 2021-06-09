@@ -25,7 +25,7 @@
     include(HEADER_VIEW_TEMPLATE);
 ?>
     <article class="form-update">
-        <h2>Alteração de Alunos</h2>
+        <h2>Alteração do Aluno</h2>
         <form action="updateStudent.php" method="post">
             <div class="form-data">
                 <label for="name">Nome (Obrigatório)</label>

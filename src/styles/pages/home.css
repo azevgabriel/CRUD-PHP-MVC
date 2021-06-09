@@ -325,6 +325,8 @@
 
 /* CSS referente aos BUTTONS do MENU */
 /**************** END ****************/
+/**************** START **************/
+/* @media referente aos diversos tamanhos de tela */
 
 @media (max-width: 1024px) {
   .container{
