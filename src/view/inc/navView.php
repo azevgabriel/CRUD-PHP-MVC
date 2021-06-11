@@ -38,10 +38,13 @@
           </div>
         </div>
       </div>
-      <p>
+      <p class="web-text">
         CRUD básico feito por 
-        <a href="https://github.com/azevgabriel">Gabriel Azevedo</a>,
+        <a href="https://github.com/azevgabriel">Gabriel Azevedo</a>, 
         com o objetivo de desenvolver um sistema de controle de alunos de uma escola.
+      </p>
+      <p class="mobile-text">
+        Por: <a href="https://github.com/azevgabriel">Gabriel Azevedo</a>.
       </p>
     </nav>
     <!-- Nav de todas as VIEWS -->

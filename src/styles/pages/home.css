@@ -49,9 +49,13 @@
   color: #000;
 }
 
-.container nav p {
+.web-text {
   padding: 1rem 3rem;
   text-align: right;
+}
+
+.mobile-text {
+  display: none;
 }
 
 .container nav p a {
@@ -152,7 +156,6 @@
 }
 
 .form-search form button {
-  margin-right: 2rem;
   height: 2.5rem;
   border: 0;
   background: rgb(28, 46, 150);
@@ -366,19 +369,55 @@
 
 @media (max-width: 500px) {
   .container nav {
-    width: 100%;
+    margin: 0;
+    width: 100vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .container .nav-header {
+    padding-top: 1rem
+  }
+  .container .web-text {
+    display: none;
+  }
+  .container .mobile-text {
+    display:flex;
+    padding: 0 0 1rem 0;
+  }
+  .container .mobile-text a {
+    display:flex;
+    padding: 0 0 0 0.5rem;
+  }
+  .container nav a img {
+    display: none;
   }
   .nav-body {
-    flex-direction: column;
+    flex-direction: row;
   }
   .container article {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     width: 100%;
-    margin: 1rem;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+  }
+  .table-data{
+    display:flex;
+    width: 100%;
+    overflow-x: scroll;
+    padding: 1rem;
+  }
+  .form-search h1{
+    display: none;
   }
   .form-search form input{
-    width: 10rem;
+    width: 12rem;
   }
-  .form-search form{
-    align-self: start; 
+  .form-submit{
+    margin-bottom: 1rem;
+  }
+  .form-update h2{
+    padding-top: 1rem;
   }
 }

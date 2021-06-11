@@ -24,7 +24,7 @@
       <button type="submit">Pesquisar</button>
     </form>
     <?php
-      $studentsController -> search($searchInput);
+        $studentsController -> search($searchInput);
     ?>
   </article>
 <?php
